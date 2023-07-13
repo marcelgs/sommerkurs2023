@@ -1,123 +1,36 @@
 ---
 layout: default
+title: Sommerkurs i statistikk 2023
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Forelesning II
+*2023-07-13*
 
-[Link to another page](./another-page.html).
+MLE, Fisherinformasjon, asymptotisk normalitet
 
-There should be whitespace between paragraphs.
+[Kode](https://colab.research.google.com/drive/1hdqR6nb6lyQM6MpMnjFsFx5TSkO4rIau?usp=sharing)
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+# Forelesning I
+*2023-07-11*
 
-# Header 1
+Grunnleggende sannsynlighetsteori
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+[Notat](/sommerkurs2023/lectures/2023-07-11/grunnleggende-sannsynlighetsteori)
 
-## Header 2
+# Oppstart
+*2023-07-10*
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+I morgen har vi altså første forelesning! Vi sees klokka 10 i Auditoriet 🙂
 
-### Header 3
+# Velkommen!
+*2023-06-28*
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+Dette er altså nettsiden til sommerkurset i statistikk 2023 – et nyttig kurs for unge forskere som ønsker å oppdage og analysere mønstre i dataene omkring oss.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+Denne nettsiden vil inneholde kodeeksempler, oppgaver og videre lesning, samt all praktisk informasjon, som potensielle endringer i timeplanen.
 
-#### Header 4
+Foreløpig er planen å holde syv forelesninger, hver tirsdag og torsdag, fra 10:00 til 11:00, med oppstart 11. juli. Altså blir siste forelesning tirsdag første august.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Jeg ser frem til å bli kjent med dere!
 
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+Hilsen Dennis
