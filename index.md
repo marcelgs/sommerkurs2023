@@ -15,7 +15,7 @@ MLE, Fisherinformasjon, asymptotisk normalitet
 
 Grunnleggende sannsynlighetsteori
 
-[Notat](/sommerkurs2023/lectures/2023-07-11/grunnleggende-sannsynlighetsteori)
+[Notat](/sommerkurs2023/lectures/1-grunnleggende-sannsynlighetsteori)
 
 # Oppstart
 *2023-07-10*

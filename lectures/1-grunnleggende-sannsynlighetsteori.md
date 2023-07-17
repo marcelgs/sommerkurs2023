@@ -1,21 +1,31 @@
-$\newcommand{\hdr}[4]{\@ifstar{\color{#2}\boxed{#1\ |\ \textcolor{black}{#3}}\color{black}\ }{\color{#2}\boxed{#1\ |\ \textcolor{black}{#3}\ |\ \textcolor{black}{#4}}\color{black}\ }}$
-$\newcommand{\defn}[2]{\hdr{D}{fdc086}{#1}{#2}}$
-$\newcommand{\thm}[1]{\hdr{T}{7fc97f}{#1}{}*}$
-$\newcommand{\ex}[1]{\hdr{E}{ae9ed4}{#1}{}*}$
-$\newcommand{\danger}[2]{\hdr{\textbf{☡}}{cc0000}{#1}{\textcolor{cc0000}{\textbf{☡}}}}$
-$\newcommand{\notation}{}$
+---
+title: I - Grunnleggende sannsynlighetsteori
+---
+
+
+$\newcommand{\hdr}[4]{\color{#2}\boxed{\color{#2}\ #1\ \mid\ \textcolor{black}{#3} #4\ }\color{black} }$
+
+$\newcommand{\defn}[1]{\hdr{D}{##fdc086}{#1}{}}$
+$\newcommand{\defnn}[2]{\hdr{D}{##fdc086}{#1}{\ \mid\ \textcolor{black}{#2}}}$
+$\newcommand{\thm}[1]{\hdr{T}{##7fc97f}{#1}{}}$
+$\newcommand{\ex}[1]{\hdr{E}{##ae9ed4}{#1}{}}$
+$\newcommand{\danger}[2]{\hdr{\textbf{☡}}{##cc0000}{#1}{\textcolor{##cc0000}{\textbf{☡}}}}$
 $\renewcommand{\P}{\mathbb{P}}$
+$\newcommand{\R}{\mathbb{R}}$
+$\renewcommand{\|}{|}$
+
+
+
 $%https://tex.stackexchange.com/a/326378$
 
-# Introduksjonsforelesning
+# I - Grunnleggende sannsynlighetsteori
 ## Hendelser og sannsynlighetsmål
 
-
-$\defn{\text{Sannsynlighetsrom}}{(\Omega, \mathcal{E}, \P)}$ definerer et (stokastisk) eksperiment:
+$\defnn{\text{Sannsynlighetsrom}}{(\Omega, \mathcal{E}, \P)}$ definerer et (stokastisk) eksperiment:
 
 - $\Omega$ er mengden av alle enkeltutfall i eksperimentet.
 - $\mathcal{E}$ er mengden av hendelser. Inntil videre holder det å tenke på hendelser som delmengder av $\Omega$, altså null eller flere av enkeltutfallene.[^1]
-- $\defn{\text{Sannsynlighetsmål}}{\P}$ gitt ved *sannsynlighetsaksiomene*:
+- $\defnn{\text{Sannsynlighetsmål}}{\P}$ som oppfyller *sannsynlighetsaksiomene*:
     1. $\P: \mathcal{E} \rightarrow [0,1]$\
     Sannsynlighetsmålet forteller oss sannsynligheten for en hendelse, og denne må være minst null (inntreffer aldri) og maksimalt én (inntreffer alltid).
     2. $\P(\Omega) = 1$\
@@ -24,15 +34,15 @@ $\defn{\text{Sannsynlighetsrom}}{(\Omega, \mathcal{E}, \P)}$ definerer et (stoka
     Om *enten* $E_1$ *eller* $E_2$ kan inntreffe, er sannsynligheten for at én av dem inntreffer lik summen av de to sannsynlighetene. 
 
 
-$\defn{\text{Komplement}}{A^{\complement}}$ til en hendelse $A$ oppfyller $\P(A^\complement)=1-\P(A)$
+$\defnn{\text{Komplement}}{A^{\complement}}$ til en hendelse $A$ oppfyller $\P(A^\complement)=1-\P(A)$
 
 ## Uavhengige hendelser
 
-$\defn{\text{Uavhengighet}}{A \perp B}$ hvis $\P(A\cap B)=\P(A)\P(B)$
+$\defnn{\text{Uavhengighet}}{A \perp B}$ hvis $\P(A\cap B)=\P(A)\P(B)$
 
 &nbsp; &nbsp; &nbsp; Tilsvarende er flere mengder uavhengige hvis $\P(E_1 \cap \dots \cap E_n) = \P(E_1) \cdot \dots \cdot  \P(E_n)$.
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $\danger{\text{Det er \textbf{ikke} tilstrekkelig at mengdene er \textit{parvis} uavhengige.}}{}$
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $\danger{\text{Det er }\textbf{ikke}\text{ tilstrekkelig at mengdene er }\textit{parvis}\text{ uavhengige.}}{}$
 
 $\ex{\text{To mynter}}$
 - $\Omega = \set{\text{KK}, \text{KM}, \text{MK}, \text{MM}}$
@@ -44,13 +54,13 @@ $\ex{\text{To mynter}}$
 &nbsp; &nbsp; &nbsp; Er $A$, $B$ og $C$ uavhengige? Parvis uavhengige?
 
 ## Betinget sannsynlighet
-$\defn{\text{Betinget sannsynlighet}}{\P(A\mid B)} =\frac{\mathbb{P(A\cap B)}}{\P(B)}$
+$\defnn{\text{Betinget sannsynlighet}}{\P(A\mid B)} =\frac{\mathbb{P(A\cap B)}}{\P(B)}$
 
 Med andre ord er $\P(A\mid B)$ sannsynligheten for at $A$ inntreffer, gitt at $B$ inntreffer.
 
 ## Stokastiske variabler
 
-Ofte bryr vi oss mer om funksjoner av utfall enn utfallene i seg selv. For eksempel kan et utfall $\omega \in \Omega$ være gitt ved en fullstendig beskrivelse av alle luftmolekylene i atmosfæren over Kjeller en gitt dag. Dette er litt vanskelig å forholde seg til, så vi lager oss en "gjennomsnittlig bevegelsesenergi-funksjon" $T$ og kaller det den spytter ut for temperatur $T(\omega)$ i $\text{\textdegree C}$ ([ish](https://physics.stackexchange.com/questions/337549/what-is-the-definition-of-temperature-once-and-for-all)). Når vi skriver $\P(T \leq 20)$, snakker vi egentlig om $\P(\set{\omega : T(\omega) \leq 20})$[^3].
+Ofte bryr vi oss mer om funksjoner av utfall enn utfallene i seg selv. For eksempel kan et utfall $\omega \in \Omega$ være gitt ved en fullstendig beskrivelse av alle luftmolekylene i atmosfæren over Kjeller en gitt dag. Dette er litt vanskelig å forholde seg til, så vi lager oss en "gjennomsnittlig bevegelsesenergi-funksjon" $T$ og kaller det den spytter ut for temperatur $T(\omega)$ i $\text{°C}$ ([ish](https://physics.stackexchange.com/questions/337549/what-is-the-definition-of-temperature-once-and-for-all)). Når vi skriver $\P(T \leq 20)$, snakker vi egentlig om $\P(\set{\omega : T(\omega) \leq 20})$[^3].
 
 Det er viktig å merke seg at det ikke er noe stokastisk med variabelen (funksjonen) *i seg selv*. All tilfeldigheten "bor" i det underliggende utfallsrommet, og stokastisiteten i verdiene variabelen tar er simpelthen et resultat av dette.
 
@@ -58,13 +68,13 @@ Den formelle definisjonen er kronglete, så vi nøyer oss med å si at verdiene 
 
 Om vi kan definere en fornuftig ordning på verdiene, er det ofte nyttig å snakke om sannsynligheten for at variabelen er mindre enn et visst tall:
 
-$\defn{\text{Kumulativ fordelingsfunksjon}}{F_X(x)} = \P(X \leq x)$
+$\defnn{\text{Kumulativ fordelingsfunksjon}}{F_X(x)} = \P(X \leq x)$
 
 &nbsp; &nbsp; &nbsp; $\ex{\text{Egenskapene til } F_X}$ Hva skjer med $F_X$ når $X\rightarrow \pm \infty?$ Hva kan vi si om $F_X(x)$ og $F_Y(y)$ når $x<y$?
 
 I de to siste tilfellene sier vi at variabelen er *diskret*, og vi kan definere en *massefunksjon*:
 
-$\defn{\text{Sannsynlighetsmassefunksjon}}{p_X(x)} = \P(X=x)$
+$\defnn{\text{Sannsynlighetsmassefunksjon}}{p_X(x)} = \P(X=x)$
 
 Om du husker at $\P(X=x) = \P(\set{\omega:X(\omega)=x})$ og tar en titt på sannsynlighetsaksiomene [over](#hendelser-og-sannsynlighetsmål), er det lett å se at $p_X$ har følgende egenskaper:
 - $p_X(x) \in [0,1]$
@@ -76,7 +86,7 @@ Hvis $X$ tar verdier i $\R$ og $F_X$ er kontinuerlig, sier vi at $X$ er kontinue
 
 Vi introduserer derfor konseptet *tetthet*:
 
-$\defn{\text{Sannsynlighetstetthetsfunksjon (pdf)}}{f_x(x)}$ slik at $F_X(x) = \int\limits_{-\infty}^x f_X(u)\ du$[^4]
+$\defnn{\text{Sannsynlighetstetthetsfunksjon (pdf)}}{f_x(x)}$ slik at $F_X(x) = \int\limits_{-\infty}^x f_X(u)\ du$[^4]
 
 &nbsp; &nbsp; &nbsp; Det følger at $\P(a < X \leq b) = \int\limits_a^b f_X(u)\ du$.
 
@@ -84,20 +94,20 @@ $\defn{\text{Sannsynlighetstetthetsfunksjon (pdf)}}{f_x(x)}$ slik at $F_X(x) = \
 
 
 ## Simultan sannsynlighetsfordeling og uavhengige stokastiske variabler
-$\defn{\text{Simultan massefunksjon}}{p_{X,Y}(x,y)}=\P(X=x \text{ og } Y=y) = \P(\set{\omega : X(\omega) = x \text{ og } Y(\omega) = y})$
+$\defnn{\text{Simultan massefunksjon}}{p_{X,Y}(x,y)}=\P(X=x \text{ og } Y=y) = \P(\set{\omega : X(\omega) = x \text{ og } Y(\omega) = y})$
 
 Definisjonen av uavhengighet for diskrete stokastiske variabler følger direkte av den for hendelser [over](#uavhengige-hendelser).
 
 <!-- Remark on Tonelli? -->
-$\defn{\text{Simultan tetthetsfunksjon}}{f_{X,Y}(x,y)}$ slik at $F_{X,Y}(x,y) = \P(X \leq x \text{ og }Y \leq y) = \int\limits_{-\infty}^x \int\limits_{-\infty}^y f(u,v)\ du\ dv$
+$\defnn{\text{Simultan tetthetsfunksjon}}{f_{X,Y}(x,y)}$ slik at $F_{X,Y}(x,y) = \P(X \leq x \text{ og }Y \leq y) = \int\limits_{-\infty}^x \int\limits_{-\infty}^y f(u,v)\ du\ dv$
 
 På samme måte har vi at $X\perp Y \iff f_{X,Y}(x,y)=f_X(x)f_Y(y)$.
 
 
 ## Betinget tetthet
-$\defn{\text{Betinget massefunksjon}}{p_{Y \mid X}(y)} = \P(Y=y \mid X = x)$[^5]
+$\defnn{\text{Betinget massefunksjon}}{p_{Y \mid X}(y)} = \P(Y=y \mid X = x)$[^5]
 
-$\defn{\text{Betinget tetthet}}{f_{Y \mid X}(y)} = \frac{f_{X,Y}(x,y)}{f_X(x)}$
+$\defnn{\text{Betinget tetthet}}{f_{Y \mid X}(y)} = \frac{f_{X,Y}(x,y)}{f_X(x)}$
 
 For uavhengige variabler er den betingede massefunksjonen (tetthetsfunksjonen) lik den marginale massefunksjonen (tetthetsfunksjonen): $p_{Y \mid X} = p_Y$, $f_{Y \mid X} = f_Y$.
 
@@ -110,13 +120,13 @@ $\thm{\text{Bayes (tettheter)}}$ $f_{Y \mid X = x }(y) = \frac{f_{X \mid Y = y}(
 $\ex{\text{Bevis Bayes' teorem}}$ (følger fra definisjonen av betinget sannsynlighet)
 
 ## Momenter
-$\defn{\text{Forventning (diskret }X\text{)}}{\mu = \mathbb{E}[X]}=\sum\limits_{\text{alle } x}x\cdot p_X(x)$
+$\defnn{\text{Forventning (diskret }X\text{)}}{\mu = \mathbb{E}[X]}=\sum\limits_{\text{alle } x}x\cdot p_X(x)$
 
-$\defn{\text{Forventning (kontinuerlig }X\text{)}}{\mu = \mathbb{E}[X]}=\int\limits_{-\infty}^{\infty}x\cdot f_X(x)\ dx$
+$\defnn{\text{Forventning (kontinuerlig }X\text{)}}{\mu = \mathbb{E}[X]}=\int\limits_{-\infty}^{\infty}x\cdot f_X(x)\ dx$
 
 Vi kan tolke forventningen som gjennomsnittet av verdiene $X$ tar, vektet etter hvor ofte de inntreffer.
 
-$\defn{\text{Varians}}{\mathbb{V}[X]}=\mathbb{E}[(X-\mu)^2]$
+$\defnn{\text{Varians}}{\mathbb{V}[X]}=\mathbb{E}[(X-\mu)^2]$
 
 Tolkning: Vi finner avstanden fra hver av verdiene $X$ kan ta til forventningen (gjennomsnittet). Så tar vi forventningen igjen for å finne den gjennomsnittlige avstanden (igjen vektet etter hvor ofte verdiene inntreffer). Vi kvadrerer slik at positive og negative avstander ikke nuller hverandre ut.
 
@@ -128,120 +138,34 @@ $\ex{\text{Vis at }\mathbb{V}[a\cdot X+b\cdot Y]=a^2\cdot \mathbb{V}[X]+b^2\cdot
 
 $\ex{X\thicksim \text{Beta}(\alpha,\beta)\text{. Finn } \mathbb{E}[X]\text{ og }\mathbb{V}[X].}$[^6]
 
-&nbsp; &nbsp; &nbsp; $\defn{\text{Beta(}\alpha, \beta\text{)}}{}*$ har tetthet $f(x)=\frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1}$[^7]
+&nbsp; &nbsp; &nbsp; $\defn{\text{Beta(}\alpha, \beta\text{)}}$ har tetthet $f(x)=\frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1}$[^7]
 
 &nbsp; &nbsp; &nbsp; Hint: Flytt det som ikke avhenger av $x$ utenfor integralet. Skriv $a=a+1 -1$.
 
 ## Transformasjoner av stokastiske variabler
 La den stokastiske variabelen $Y$ være gitt ved en funksjon $g$[^8] av en annen stokastisk variabel $X$, altså $Y=g(X)$.
 
-$\thm{\text{Transformasjon av kontinuerlig stokastisk variabel}}$ $f_Y(y) = f_X(g^{-1}(y))\left|{\frac{dx}{dy}}\right|$
 
+$\thm{\text{Transformasjon av kontinuerlig stokastisk variabel}}$ $f_Y(y) = f_X(g^{-1}(y))\left\|{\frac{dx}{dy}}\right\|$
+ 
 $\ex{Y=e^X}$
 
 &nbsp; &nbsp; &nbsp; $g^{-1}(y)=\ln(y)$
 
-&nbsp; &nbsp; &nbsp; $\left|{\frac{dx}{dy}}\right|= \left|{\frac{dg^{-1}(y)}{dy}}\right| = \left|{\frac{1}{y}}\right|=\frac{1}{y}$
+&nbsp; &nbsp; &nbsp; $\left\|{\frac{dx}{dy}}\right\|= \left\|{\frac{dg^{-1}(y)}{dy}}\right\| = \left\|{\frac{1}{y}}\right\|=\frac{1}{y}$
 
 &nbsp; &nbsp; &nbsp; $f_Y(y) = f_X(\ln(y))\cdot \frac{1}{y}$
 
 $\ex{\text{La } X\thicksim \mathcal{N}(0,1)\text{. Vis at } f_Y(y)=\frac{1}{y\sqrt{2\pi}}\exp\left(-\frac{\ln(y)^2}{2}\color{black}\right).}$
 
-$(X,Y)\mapsto (R,S) = (R(X,Y), S(X,Y))$
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-$f_{R,S}(r,s)=f_{X,Y}(x(r,s), y(r,s)) \cdot \det \frac{\partial(x,y)}{\partial(r,s)}$
-
-## Eksempel
-X er beta, skriv opp PDF
-
-Z er gamma (def)
-
-X gamma(a,1), Y gamma(b,1), indep
-
-S=X+Y, R=X/(X+Y) (s sum, r rate, forklar at dette er noe vi gjør ganske ofte)
-
-Vis at R og S er uavhengige, S er gamma(a+b,1), R er Beta(a,b)
-
-Bevis:
-
-s = x + y
-r = x/(x+y)
-
-x = rs
-y = s-rs = s(1-r)
-
-Regner ut Jacobimatrisen:
-
-J = determ av det vanlige = [[s r], [-s 1-r]]=s(1-r)+rs=s
-
-f_R,S(r,s) = f_x(x(r,s))*f_y(y(r,s))*s
-
-Ignorerer normaliseringskonstanten, trenger kun at dette er $\propto (rs)^{(a-1)} \propto (rs)^{(a-1)}*e^{(rs)}*(s(1-r))^{(b-1)}*(e^{-s(1-r)})*s$
-
-$=r^{a-1}* (1-r)^{b-1}* s^{a-1+b-1+1} * e^{-s}$
-
-blir til slutt propto beta * gamma
-
-## Svipptur innom tallteorien
-
-def $\zeta(s)$
-
-bryr oss kun om reelle s
-
-For eksempel: $\zeta(1)$ (harmonisk rekke, bruk ditt eget bevis)
-
-For eksempel: $\zeta(2)$ (basel-problemet)
-
-Fotnote om Basel-problemet
-
-Euler: skriv zeta(s) som produkt av primtall
-
-Bevis: X RV på Z+
-
-p_X(n) = P(x=n) = (1/n^s)*(1/zeta(s))
-
-Sjekk at aksiomene stemmer:
-sum over all n er 1/(zeta(s)) utenfor, sum av 1/n^s er zeta, zeta delt på zeta = 1
-
-første aksiom åpenbart
-
-a) k geq 2. Sannsynlighet for at P(k|X) = P(X delelig på k)
-
-P(k|X) = sum fra n til inf av P(X=nk) = sum 1/(nk)^s ganger 1/zeta = 1/k^s  ganger 1/zeta ganger sum 1/n^s = 1/k^s
-
-b)
-
-Definerer litt mer notasjon:
-D_k = {k|X} (hendelse)
-
-viser nå at {D_p: p primtall} er uavhengige (ikke parvis), altså at pmf faktoriserer
-
-
-Bevis:
-
-p_1, ..., p_n primtall
-
-P(D_k) = 1/k^s (forklar dette)
-
-P(D_p_1 cap ...): hvis vi tenker oss om, er den eneste måten et tall kan være delelig på alle disse primtallene, er om det er delelig på produktet av primtallene. Dermed følger svaret trivielt: =P(D_(p1 ganger p2 ganger ...)). Merk at dette ikke går hvis vi har composite (eks delelig på 2 og 4 betyr ikke delelig på 8 - dobbelttelling) = 1/(produktet) = triviell likhet
-
-Vis så at {D_p^\complement: p primtall} også er uavhengige. Dette gjelder generelt (independent variables implies complement of variables indep)
-
-Hendelsene over er altså "X kan **ikke** deles på p"
-
-Ser på hendelsen P(cap_p prime D_p^\complement) = big pi_p prime av P(D_p^complement) = big pi av 1-P(D_p) = big pi av 1- (1/p^s) = big pi (1-1/p^s)
-
-Går tilbake, ser at uttrykket vi begynte med i forrige steg er P(X=1), siden 1 er det eneste positive heltallet som ikke kan deles med noe primtall. Dermed også = 1/1^s ganger 1/zeta(s)
-
-Dermed har vi vist at produktet over alle primtallene p av (1-1/p^s) = 1/zeta(s)
-
-zeta(s) = {big pi 1-1/p^s}^-1 = big pi (1-1/p^s)-1
-
-$$~$$
-$$~$$
-$$~$$
-$$~$$
-$$~$$
 
 [^1]: Dette er ikke helt korrekt, og fungerer ikke når vi møter på mindre "hyggelige" mengder enn de vi tar for oss nå. Da må vi introdusere konseptet *målbarhet*, som er til å få vondt i hodet av.
 
@@ -249,7 +173,7 @@ $$~$$
 
 [^3]: Kolonet betyr "slik at".
 
-[^4]: Lenge siden du har sett et integral? Frykt ikke! Tenkt på dette som at vi begynner med den laveste mulige verdien variabelen kan ta (f.eks. $T=-273.15$) og ser på hvilken sannsynlighets*tetthet* vi har ved denne verdien. Så øker vi gradvis verdien av variabelen til vi når, og "summerer opp" alle tetthetene. Til slutt ender vi opp med en *sannsynlighet* (f.eks. for hendelsen $T < 20$, med $\P(T < 20) = F_T(20) = \int\limits_{-\infty}^{20} f_T(u)\ du$). For ordens skyld er det verdt å nevne at vi også krever at $F$ er deriverbar.
+[^4]: Lenge siden du har sett et integral? Frykt ikke! Tenkt på dette som at vi begynner med den laveste mulige verdien variabelen kan ta (f.eks. $T=-273.15$) og ser på hvilken sannsynlighets*tetthet* vi har ved denne verdien. Så øker vi gradvis verdien av variabelen til vi når verdien vi ønsker, og "summerer opp" alle tetthetene. Til slutt ender vi opp med en *sannsynlighet* (f.eks. for hendelsen $T < 20$, med $\P(T < 20) = F_T(20) = \int\limits_{-\infty}^{20} f_T(u)\ du$). For ordens skyld er det verdt å nevne at vi også krever at $F$ er deriverbar.
 
 [^5]: Husk at $X=x$ viser til hendelsen $\set{\omega : X(\omega)=x}$
 
