@@ -94,7 +94,7 @@ $\defnn{\text{Sannsynlighetstetthetsfunksjon (pdf)}}{f_x(x)}$ slik at $F_X(x) = 
 
 
 ## Simultan sannsynlighetsfordeling og uavhengige stokastiske variabler
-$\defnn{\text{Simultan massefunksjon}}{p_{X,Y}(x,y)}=\P(X=x \text{ og } Y=y) = \P(\set{\omega : X(\omega) = x \text{ og } Y(\omega) = y})$
+$\defnn{\text{Simultan massefunksjon}}{p_{X,Y}(x,y)}=\P(X=x \text{ og } Y=y) = $ $\P(\set{\omega : X(\omega) = x \text{ og } Y(\omega) = y})$
 
 Definisjonen av uavhengighet for diskrete stokastiske variabler følger direkte av den for hendelser [over](#uavhengige-hendelser).
 
