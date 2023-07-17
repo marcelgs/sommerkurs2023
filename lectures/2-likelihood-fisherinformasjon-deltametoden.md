@@ -7,27 +7,32 @@ $\newcommand{\ex}[1]{\hdr{E}{ae9ed4}{#1}{}}$
 $\newcommand{\danger}[2]{\hdr{\textbf{☡}}{cc0000}{#1}{\textcolor{cc0000}{\textbf{☡}}}}$
 $\renewcommand{\P}{\mathbb{P}}$
 
-$\newcommand{\iidsim}{\stackrel{i.i.d}{\thicksim}}$
+$\newcommand{\iidsim}{\overset{\mathrm{iid}}{\sim}}$
 
 # Likelihood-funksjonen, Fisherinformasjon og deltametoden
-## Frempek og litt notasjon
-Modell: $Y_1, \dots, Y_n \stackrel{i.i.d}{\thicksim} f_Y(y;\theta)$
+## Grunnleggende konsepter
+Modell: $Y_1, \dots, Y_n \iidsim f_Y(y;\theta)$[^1]\
+Data (realiseringer, observasjoner): $y_1, \dots, y_n$
 
-Data: $y_1, \dots, y_n$
-
-Sannsynlighetsteori: modell $\rightarrow$ data
-
+Sannsynlighetsteori: modell $\rightarrow$ data\
 Statistikk: data $\rightarrow$ modell
+
+Siden antikkens tid har en grunnleggende forståelse av sannsynlighet gjort nytte for seg innen [forsikring](https://en.wikipedia.org/wiki/History_of_insurance), [kryptoanalyse](https://en.wikipedia.org/wiki/Al-Kindi#Cryptography) og (selvsagt) [lykkespill](https://en.wikipedia.org/wiki/De_vetula#Non-poetic_content). Det aksiomatiske grunnlaget for feltet kom derimot først på plass i 1933 da Andrej N. Kolmogorov formulerte sannsynlighetsaksiomene vi møtte i forrige forelesning. Epistemologene strides fortsatt om hvordan sannsynligheter skal forstås, men vi skyver den diskusjonen under teppet og nøyer oss med superkorte forklaringer av de to dominerende tolkningene:
+
+Frekventistisk sannsynlighetsteori: $\theta$ er bestemt, men ukjent. Sannsynlighet forstås som andeler av utfallene når et eksperiment gjentas mange ganger[^2]. Frekventistiske metoder går stort sett ut på å konstruere ulike estimatorer med ønskede egenskaper, der *maximum likelihood*-estimatoren er den viktigste.
+
+
+Bayesiansk sannsynlighetsteori: $\theta$ er en stokastisk variabel. Sannsynlighet forstås som en grad av usikkerhet. Bayesianske metoder er konseptuelt mye enklere - vi må "bare" konstruere en modell og en priorfordeling (vi kommer tilbake til hva dette betyr), og så er vi i prinsippet ferdige. Problemet ligger 
+
+De tre neste forelesningene skal handle om frekventistiske metoder.
+
+## Likelihood-funksjonen
 
 Vi skal se på likelihood-funksjonen:
 
 $\defnn{\text{Likelihood}}{\mathcal{L_n}(\theta)} = \prod_1^n f_y(y_i; \theta)$
 
 $\defnn{\text{Log-likelihood}}{\ell_n(\theta)} = \log \mathcal{L_n} = \sum_1^n \log f(y_i;\theta)$
-
-Frekv: theta ligger fast (3 neste), driver med max likelihood
-
-Bayes: theta er en stokastisk variabel
 
 MLE = argmax av L_n = argmax av \ell_n
 
@@ -53,9 +58,9 @@ grad_a(A^-1) = A^-1 A^-1 = -A^-2 (tilsvarende univariate deriv av 1/x)
 
 Vi slår opp: grad_A(Tr(AB))= B^T og grad_A(log|A|)=(A^-1)^T
 
-## Tilbake
+## Digresjon slutt
 
-TODO: sett  (gir samme svar). Tricky fordi sigma må oppfylle kravene til kovariansmatrise, men vi glemmer det og håper/sjekker at det går greit
+TODO: sett inn  (gir samme svar). Tricky fordi sigma må oppfylle kravene til kovariansmatrise, men vi glemmer det og håper/sjekker at det går greit
 
 grad_z (l_n(mu, sigma)) = det du får
 
@@ -108,3 +113,8 @@ Eks: h(a,b) = a/b^2
 del h = vec(1/b^2 -2a/b^3)
 
 %deltavariance i koden er variansen etter å ha brukt deltametoden%
+
+
+[^1]: $\mathrm{i.i.d.}:$ independent and identically distributed. Du *kan* ([ifølge Wikipedia](https://no.wikipedia.org/wiki/Uavhengige,_identisk_fordelte_variabler)) skrive $\mathrm{u.i.f.}$ ("uavhengige og identisk fordelte") på norsk, men da ser folk rart på deg.
+
+[^2]: Denne teoretiske antakelsen er det ofte vanskelig å implementere i praksis. Lykke til med å folk med på å nullstille verden til 1990 $n$ ganger for at du skal finne ut hvordan inflasjon og arbeidsledighet henger sammen.

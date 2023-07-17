@@ -10,6 +10,8 @@ MLE, Fisherinformasjon, asymptotisk normalitet
 
 [Kode](https://colab.research.google.com/drive/1hdqR6nb6lyQM6MpMnjFsFx5TSkO4rIau?usp=sharing)
 
+[Uferdig notat](/lectures/2-likelihood-fisherinformasjon-deltametoden.md)
+
 # Forelesning I
 *2023-07-11*
 
