@@ -7,9 +7,9 @@ $\newcommand{\ex}[1]{\hdr{E}{ae9ed4}{#1}{}}$
 $\newcommand{\danger}[2]{\hdr{\textbf{☡}}{cc0000}{#1}{\textcolor{cc0000}{\textbf{☡}}}}$
 $\renewcommand{\P}{\mathbb{P}}$
 
-$\newcommand{\iidsim}{\overset{\mathrm{iid}}{\sim}}$
+$\newcommand{\iidsim}{\overset{\mathrm{i.i.d.}}{\sim}}$
 
-# Likelihood-funksjonen, Fisherinformasjon og deltametoden
+# II: Likelihood-funksjonen, Fisherinformasjon og deltametoden
 ## Grunnleggende konsepter
 Modell: $Y_1, \dots, Y_n \iidsim f_Y(y;\theta)$[^1]\
 Data (realiseringer, observasjoner): $y_1, \dots, y_n$
@@ -61,19 +61,21 @@ A^{-1}A = I_n \\
 
 Vi tar resten av resultatene vi trenger [herfra](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf):
 
-$\nabla_A = -A^{-2}$
+$\nabla_A (A^{-1})= -A^{-2}$
 
 $\nabla_A(\mathrm{Tr}(AB)) = B^T$
 
 $\nabla_A(\log |A|) = (A^{-1})^T = (A^T)^{-1}$
 
-## Digresjon slutt
+## MLE for $\mathcal{N_p}(\mu, \Sigma)$
 
-$\ex{y_1, ..., y_n \iidsim \mathcal{N}_p(\mu, \Sigma)\text{. Finn }\hat{\theta}\text{ og }\hat{\Sigma}.}$
+Som i det enkelvariate tilfellet er den multivariate normalfordelingen parametrisert ved forventning og (ko)varians.
 
 Def positiv definitt og symmetrisk.
 
-TODO: sett inn  (gir samme svar). Tricky fordi sigma må oppfylle kravene til kovariansmatrise, men vi glemmer det og håper/sjekker at det går greit
+$\ex{y_1, ..., y_n \iidsim \mathcal{N}_p(\mu, \Sigma)\text{. Finn }\hat{\theta}\text{ og }\hat{\Sigma}.}$
+
+TODO: sett inn  Tricky fordi sigma må oppfylle kravene til kovariansmatrise, men vi glemmer det og håper/sjekker at det går greit
 
 grad_z (l_n(mu, sigma)) = det du får
 

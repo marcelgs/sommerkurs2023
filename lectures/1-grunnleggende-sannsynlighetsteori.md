@@ -18,7 +18,7 @@ $\renewcommand{\|}{|}$
 
 $%https://tex.stackexchange.com/a/326378$
 
-# I - Grunnleggende sannsynlighetsteori
+# I: Grunnleggende sannsynlighetsteori
 ## Hendelser og sannsynlighetsmål
 
 $\defnn{\text{Sannsynlighetsrom}}{(\Omega, \mathcal{E}, \P)}$ definerer et (stokastisk) eksperiment:
