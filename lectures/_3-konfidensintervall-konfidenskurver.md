@@ -13,13 +13,6 @@ $\newcommand{\iidsim}{\overset{\mathrm{iid}}{\sim}}$
 
 $\newcommand{\distconv}{\overset{d}{\rightarrow}}$
 
-Sett inn i forrige:
-
-Glemte å sjekke at \hat{Sigma} var symmetrisk og positiv definitt.
-
-$\Sigma^T = \frac{1}{n} \sum_1^n ((y_i - \bar{y})(y_i - \bar{y})^T)^T = \frac{1}{n} \sum_1^n (y_i-\bar{y})(y_i-\bar{y}^T) = \hat{\Sigma}$
-
-$\forall x (x^T \hat{\Sigma} x \geq 0) \implies x^T \hat{\Sigma} x = \frac{1}{n}$ = finish this (show positive semidefinite)
 
 
 # III: Large sample-teori, konfidensintervaller, konfidenskurver
