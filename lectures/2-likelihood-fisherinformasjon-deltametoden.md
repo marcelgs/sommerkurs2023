@@ -17,12 +17,12 @@ Data (realiseringer, observasjoner): $y_1, \dots, y_n$
 Sannsynlighetsteori: modell $\rightarrow$ data\
 Statistikk: data $\rightarrow$ modell
 
-Siden antikkens tid har en grunnleggende forståelse av sannsynlighet gjort nytte for seg innen [forsikring](https://en.wikipedia.org/wiki/History_of_insurance), [kryptoanalyse](https://en.wikipedia.org/wiki/Al-Kindi#Cryptography) og (selvsagt) [lykkespill](https://en.wikipedia.org/wiki/De_vetula#Non-poetic_content). Det aksiomatiske grunnlaget for feltet kom derimot først på plass i 1933 da Andrej N. Kolmogorov formulerte sannsynlighetsaksiomene vi møtte i forrige forelesning. Epistemologene strides fortsatt om hvordan sannsynligheter skal forstås, men vi skyver den diskusjonen under teppet og nøyer oss med superkorte forklaringer av de to dominerende tolkningene:
+Siden antikkens tid har en grunnleggende forståelse av sannsynlighet gjort nytte for seg innen [forsikring](https://en.wikipedia.org/wiki/History_of_insurance), [kryptoanalyse](https://en.wikipedia.org/wiki/Al-Kindi#Cryptography) og (selvsagt) [lykkespill](https://en.wikipedia.org/wiki/De_vetula#Non-poetic_content). Det aksiomatiske grunnlaget for feltet kom derimot først på plass i 1933 da Andrej N. Kolmogorov formulerte sannsynlighetsaksiomene vi møtte i forrige forelesning. Epistemologene strides fortsatt om hvordan sannsynligheter skal forstås, men vi skyver den diskusjonen under teppet og nøyer oss med superkorte forklaringer av de to dominerende paradigmene:
 
 Frekventistisk sannsynlighetsteori: $\theta$ er bestemt, men ukjent. Sannsynlighet forstås som andeler av utfallene når et eksperiment gjentas mange ganger[^2]. Frekventistiske metoder går stort sett ut på å konstruere ulike estimatorer med ønskede egenskaper, der *maximum likelihood*-estimatoren er den viktigste.
 
 
-Bayesiansk sannsynlighetsteori: $\theta$ er en stokastisk variabel. Sannsynlighet forstås som en grad av usikkerhet. Bayesianske metoder er konseptuelt mye enklere - vi må "bare" konstruere en modell og en priorfordeling (vi kommer tilbake til hva dette betyr), og så er vi i prinsippet ferdige. Problemet ligger 
+Bayesiansk sannsynlighetsteori: $\theta$ er en stokastisk variabel. Sannsynlighet forstås som en grad av (epistemisk) usikkerhet. Bayesianske metoder er konseptuelt mye enklere - vi må "bare" definere en *likelihood* $f(x \mid \theta)$ og en *prior* $\pi (\theta)$ (vi kommer tilbake til hva dette betyr), og så er vi i prinsippet ferdige.
 
 De tre neste forelesningene skal handle om frekventistiske metoder.
 
@@ -34,31 +34,44 @@ $\defnn{\text{Likelihood}}{\mathcal{L_n}(\theta)} = \prod_1^n f_y(y_i; \theta)$
 
 $\defnn{\text{Log-likelihood}}{\ell_n(\theta)} = \log \mathcal{L_n} = \sum_1^n \log f(y_i;\theta)$
 
-MLE = argmax av L_n = argmax av \ell_n
+Siden vi antok at uavhengighet, ser vi at høyresiden av den første definisjonen rett og slett er simultanfordelingen til $Y_1, \dots, Y_n$. Forskjellen er at vi nå ser på uttrykket som en funksjon av $\theta$. Da blir det naturlig å spørre hvilken verdi av $\theta$ som maksimerer sannsynligheten for de observerte verdiene:
 
-$\ex{y_1, ..., y_n \iidsim \operatorname{Bn}(\theta)\text{. Finn }\hat{\theta}.}$
+$\defnn{\text{Maximum likelihood estimator (MLE)}}{\hat{\theta}} = $ $\argmax\limits_{\theta \in \Theta} \mathcal{L}_n(\theta) = $
+$\argmax\limits_{\theta \in \Theta} \mathcal{\ell}_n(\theta)$
 
-TODO: Sett inn (skal bli theta hat = empirisk snitt (bar) av y_i)
+$\ex{y_1, ..., y_n \iidsim \operatorname{Bernoulli}(\theta)\text{. Vis at }\hat{\theta} = \bar{y} = \frac{1}{n}\sum_1^n y_i .}$
+
+## Digresjon: matrisederivasjon
+
+I multivariabeltilfellet blir $\mathcal{L}(n)$ en matrise. Vi repeterer noen regler for derivasjon av matriser:
+
+La $A$ være en matrise som avhenger av $x$: $A = A(x)$.
+
+$$\begin{aligned}
+
+A^{-1}A = I_n \\
+
+\frac{\partial}{\partial x} A^{-1}A = 0 \\
+
+\frac{\partial}{\partial x} A^{-1} A + A^{-1}\frac{\partial}{\partial x}A = 0 \\
+
+\frac{\partial}{\partial x} A^{-1} = -A^{-1} \frac{\partial}{\partial x} A^{-1}
+
+\end{aligned}$$
+
+Vi tar resten av resultatene vi trenger [herfra](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf):
+
+$\nabla_A = -A^{-2}$
+
+$\nabla_A(\mathrm{Tr}(AB)) = B^T$
+
+$\nabla_A(\log |A|) = (A^{-1})^T = (A^T)^{-1}$
+
+## Digresjon slutt
 
 $\ex{y_1, ..., y_n \iidsim \mathcal{N}_p(\mu, \Sigma)\text{. Finn }\hat{\theta}\text{ og }\hat{\Sigma}.}$
 
 Def positiv definitt og symmetrisk.
-
-## Digresjon: matrisederivasjon, hvordan vi deriverer L(sigma)
-
-$A = A(x)$ n x n
-
-$A^{-1}A = I_n$
-
-\partial på x fra venstre m chain rule: part (A^-1)A + A^-1 partial A = 0
-
-flytt til hver sin side og gang med A^-1 fra venstre
-
-grad_a(A^-1) = A^-1 A^-1 = -A^-2 (tilsvarende univariate deriv av 1/x)
-
-Vi slår opp: grad_A(Tr(AB))= B^T og grad_A(log|A|)=(A^-1)^T
-
-## Digresjon slutt
 
 TODO: sett inn  (gir samme svar). Tricky fordi sigma må oppfylle kravene til kovariansmatrise, men vi glemmer det og håper/sjekker at det går greit
 
