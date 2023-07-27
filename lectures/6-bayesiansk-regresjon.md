@@ -46,7 +46,7 @@ RLS: $\min\limits_w ||\Phi w-y||^2 + \lambda ||w||^2$ med løsning $\hat w_p = (
 
 # Bayesiansk regresjon
 
-Vi tar for oss eksempelet fra sist gang:
+Vi tar for oss eksempelet fra forrige gang:
 
 Prior w \thicksim N(m_0, S_0)
 
