@@ -26,7 +26,7 @@ Har du notater (papir/Markdown/LaTeX) fra forelesning IV og/eller V? Send dem ti
 # Forelesning III
 *2023-07-18*
 
-Wilks' teorem, confidence curves
+Wilks' teorem, konfidensintervall, konfidenskurver
 
 [Notat (WIP)](/lectures/3-wilks-konfidensintervall-konfidenskurver)
 
