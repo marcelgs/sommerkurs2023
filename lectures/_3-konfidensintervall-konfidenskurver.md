@@ -6,7 +6,7 @@ $\newcommand{\defn}[1]{\hdr{D}{fdc086}{#1}{}}$
 $\newcommand{\defnn}[2]{\hdr{D}{fdc086}{#1}{\ |\ \textcolor{black}{#2}}}$
 $\newcommand{\thm}[1]{\hdr{T}{7fc97f}{#1}{}}$
 $\newcommand{\ex}[1]{\hdr{E}{ae9ed4}{#1}{}}$
-$\newcommand{\danger}[2]{\hdr{\textbf{☡}}{cc0000}{#1}{\textcolor{cc0000}{\textbf{☡}}}}$
+$\newcommand{\danger}[1]{\hdr{\textbf{☡}}{##cc0000}{#1}{\textcolor{##cc0000}{\mid \textbf{☡}}}}$
 $\renewcommand{\P}{\mathbb{P}}$
 
 $\newcommand{\iidsim}{\overset{\mathrm{iid}}{\sim}}$

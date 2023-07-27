@@ -9,7 +9,7 @@ $\newcommand{\defn}[1]{\hdr{D}{##fdc086}{#1}{}}$
 $\newcommand{\defnn}[2]{\hdr{D}{##fdc086}{#1}{\ \mid\ \textcolor{black}{#2}}}$
 $\newcommand{\thm}[1]{\hdr{T}{##7fc97f}{#1}{}}$
 $\newcommand{\ex}[1]{\hdr{E}{##ae9ed4}{#1}{}}$
-$\newcommand{\danger}[2]{\hdr{\textbf{☡}}{##cc0000}{#1}{\textcolor{##cc0000}{\textbf{☡}}}}$
+$\newcommand{\danger}[1]{\hdr{\textbf{☡}}{##cc0000}{#1}{\textcolor{##cc0000}{\mid \textbf{☡}}}}$
 $\renewcommand{\P}{\mathbb{P}}$
 $\newcommand{\R}{\mathbb{R}}$
 $\renewcommand{\|}{|}$
@@ -42,7 +42,7 @@ $\defnn{\text{Uavhengighet}}{A \perp B}$ hvis $\P(A\cap B)=\P(A)\P(B)$
 
 &nbsp; &nbsp; &nbsp; Tilsvarende er flere mengder uavhengige hvis $\P(E_1 \cap \dots \cap E_n) = \P(E_1) \cdot \dots \cdot  \P(E_n)$.
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $\danger{\text{Det er }\textbf{ikke}\text{ tilstrekkelig at mengdene er }\textit{parvis}\text{ uavhengige.}}{}$
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  $\danger{\text{Det er }\textbf{ikke}\text{ tilstrekkelig at mengdene er }\textit{parvis}\text{ uavhengige.}}$
 
 $\ex{\text{To mynter}}$
 - $\Omega = \set{\text{KK}, \text{KM}, \text{MK}, \text{MM}}$
