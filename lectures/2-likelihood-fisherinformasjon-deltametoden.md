@@ -1,5 +1,5 @@
 ---
-title: II - Likelihood-funksjonen, Fisherinformasjon og deltametoden
+title: II: Likelihood-funksjonen, Fisherinformasjon og deltametoden
 ---
 
 
