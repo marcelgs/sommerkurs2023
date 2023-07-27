@@ -3,6 +3,16 @@ layout: default
 title: Sommerkurs i statistikk 2023
 ---
 
+# Forelesning III
+*2023-07-18*
+
+Wilks' teorem, confidence curves
+
+[Kode](https://colab.research.google.com/drive/1u_O0u2BH_1gJ7gvdWT3m2PsDXAQAmf5X?usp=sharing)
+
+Notat kommer etter hvert!
+
+
 # Forelesning II
 *2023-07-13*
 
