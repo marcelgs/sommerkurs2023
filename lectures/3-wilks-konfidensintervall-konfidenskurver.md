@@ -1,3 +1,6 @@
+---
+title: III: Wilks' teorem, konfidensintervaller, konfidenskurver
+---
 
 
 $\newcommand{\hdr}[4]{\color{#2}\boxed{#1\ |\ \textcolor{black}{#3} #4}\color{black} }$
@@ -15,7 +18,7 @@ $\newcommand{\distconv}{\overset{d}{\rightarrow}}$
 
 
 
-# III: Large sample-teori, konfidensintervaller, konfidenskurver
+# III: Wilks' teorem, konfidensintervaller, konfidenskurver
 
 Vi oppsummerer noen egenskaper ved MLE:
 

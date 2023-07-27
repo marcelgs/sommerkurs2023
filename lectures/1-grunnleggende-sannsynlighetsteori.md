@@ -1,5 +1,5 @@
 ---
-title: I - Grunnleggende sannsynlighetsteori
+title: I: Grunnleggende sannsynlighetsteori
 ---
 
 
