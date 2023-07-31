@@ -172,4 +172,4 @@ $\ex{\text{La } X\thicksim \mathcal{N}(0,1)\text{. Vis at } f_Y(y)=\frac{1}{y\sq
 
 [^7]: $g$ må være deriverbar og strengt stigende eller strengt synkende. Ser du hvorfor?
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyF8YFFvS9C_m7fGVgf47wZaJS75MEBUb1SB7dGLRiCwK13w/viewform?embedded=true" width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe id="formsbox" src="https://docs.google.com/forms/d/e/1FAIpQLScyF8YFFvS9C_m7fGVgf47wZaJS75MEBUb1SB7dGLRiCwK13w/viewform?embedded=true" width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
