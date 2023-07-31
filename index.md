@@ -3,6 +3,13 @@ layout: default
 title: Sommerkurs i statistikk 2023
 ---
 
+# Notater
+Har du notater (papir/Markdown/LaTeX) fra forelesning IV og/eller V? Send dem til meg (Marcel, du finner meg på Teams/Outlook), så laster jeg dem opp her😊
+
+Det er også supert om du vil hjelpe til med å forbedre de andre notatene! Legg inn en pull request [her](https://github.com/sommerkurs2023/sommerkurs2023.github.io), eller send en melding og be om å bli lagt til i repoet.
+
+Det ligger også en tilbakemeldingsboks på bunnen av hvert notat. Denne kan brukes for å påpeke feil og uklarheter og foreslå forbedringer.
+
 # Forelesning VI
 *2023-07-27*
 
@@ -10,7 +17,7 @@ Bayesiansk regresjon
 
 [Notat (WIP)](/lectures/6-bayesiansk-regresjon)
 
-Kode kommer snart!
+[Kode](https://colab.research.google.com/drive/1lDFjEQ6bbgtJRNJtXecgTRsuhLyYOTFx?usp=sharing)
 
 
 # Forelesning V
@@ -19,16 +26,13 @@ Kode kommer snart!
 
 [Kode](https://colab.research.google.com/drive/1QVel4xT6bMtuZF4E1G9f4TEhT3KYpWpl?usp=sharing)
 
-# Notater forelesning IV og V
-Har du notater (papir/Markdown/LaTeX) fra forelesning IV og/eller V? Send dem til meg (Marcel, du finner meg på Teams/Outlook), så laster jeg dem opp her 😊
-
 
 # Forelesning III
 *2023-07-18*
 
 Wilks' teorem, konfidensintervall, konfidenskurver
 
-[Notat (WIP)](/lectures/3-wilks-konfidensintervall-konfidenskurver)
+[Notat](/lectures/3-wilks-konfidensintervall-konfidenskurver)
 
 [Kode](https://colab.research.google.com/drive/1u_O0u2BH_1gJ7gvdWT3m2PsDXAQAmf5X?usp=sharing)
 
@@ -37,7 +41,7 @@ Wilks' teorem, konfidensintervall, konfidenskurver
 
 MLE, Fisherinformasjon, asymptotisk normalitet
 
-[Notat (WIP)](/lectures/2-likelihood-fisherinformasjon-deltametoden.md)
+[Notat](/lectures/2-likelihood-fisherinformasjon-deltametoden.md)
 
 [Kode](https://colab.research.google.com/drive/1hdqR6nb6lyQM6MpMnjFsFx5TSkO4rIau?usp=sharing)
 

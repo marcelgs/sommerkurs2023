@@ -4,20 +4,29 @@ title: VI: Bayesiansk regresjon
 
 
 $\newcommand{\hdr}[4]{\color{#2}\boxed{\color{#2}\ #1\ \mid\ \textcolor{black}{#3} #4\ }\color{black}\ }$
+
 $\newcommand{\defn}[1]{\hdr{D}{##fdc086}{#1}{}}$
 $\newcommand{\defnn}[2]{\hdr{D}{##fdc086}{#1}{\ \mid\ \textcolor{black}{#2}}}$
 $\newcommand{\thm}[1]{\hdr{T}{##7fc97f}{#1}{}}$
 $\newcommand{\ex}[1]{\hdr{E}{##ae9ed4}{#1}{}}$
 $\newcommand{\danger}[1]{\hdr{\textbf{☡}}{##cc0000}{#1}{\textcolor{##cc0000}{\mid \textbf{☡}}}}$
-$\renewcommand{\|}{|}$
+$\newcommand{\wip}[1]{\hdr{\textbf{🚧}}{##fcd100}{#1}{\textcolor{##fcb100}{\mid \textbf{🚧}}}}$
 
 $\renewcommand{\P}{\mathbb{P}}$
+$\newcommand{\E}{\mathbb{E}}$
+$\newcommand{\V}{\mathbb{V}}$
 $\newcommand{\R}{\mathbb{R}}$
-$\newcommand{\iidsim}{\overset{\mathrm{i.i.d.}}{\sim}}$
-$\newcommand{\deldel}[1]{\frac{\partial}{\partial #1}}$
+$\renewcommand{\|}{|}$
 $\newcommand{\norm}[1]{\mathcal{N}(#1)}$
-$\renewcommand{\epsilon}{\varepsilon}$
+$\newcommand{\tr}{\operatorname{tr}}$
 
+$\newcommand{\iidsim}{\overset{\mathrm{i.i.d.}}{\sim}}$
+
+$\newcommand{\deldel}[1]{\frac{\partial}{\partial #1}}$
+
+$\newcommand{\distconv}{\overset{d}{\rightarrow}}$
+
+$\wip{\text{WORK IN PROGRESS}}$
 
 # VI: Bayesiansk regresjon
 ## Repetisjon: regresjon
@@ -37,7 +46,6 @@ Regresjonsuttrykk $y = \Phi w + \epsilon$ med:
 
 - $\epsilon = \begin{pmatrix}\epsilon_0 & \dots & \epsilon_{n}\end{pmatrix}^T$, $\epsilon_i \iidsim \norm{0, \beta^{-1}}$
 
---- kodeeksempel ---
 
 OLS: $\min\limits_w ||\Phi w-y||^2 = (\Phi w - y)^T (\Phi w -y)$ med løsning $\hat w = (\Phi^T \Phi)^{-1} \Phi^T y$
 
@@ -48,35 +56,41 @@ RLS: $\min\limits_w ||\Phi w-y||^2 + \lambda ||w||^2$ med løsning $\hat w_p = (
 
 Vi tar for oss eksempelet fra forrige gang:
 
-Prior w \thicksim N(m_0, S_0)
+Prior $w \thicksim \norm{m_0, S_0}$
 
-Likelihood y \thicksim N(\Phi w, \beta^-1 I)
+Likelihood $y \thicksim \norm{\Phi w, \beta^{-1} I}$
 
-Posterior (beviste sist): w \mid y \thicksim N(m_n, s_n)
+Posterior: $w \mid y \thicksim \norm{m_n, S_n}$
 
-m_n = S_n(S_0^{-1} 0 \beta \Phi^{-1} y)
-S_n^{-1} = S_0^{-1} + \beta \Phi^T \Phi
+Vi har da:
 
-velg m_0 = 0
+$m_n = S_n(S_0^{-1} + \beta \Phi^{-1} y)$
+
+$S_n^{-1} = S_0^{-1} + \beta \Phi^T \Phi$
+
+<!--velg m_0 = 0
+
 Isotropisk S_0 = \alpha^{-1} I
 
 m_n = \beta S_N \Phi^T y
-S_n^{-1} = \alpha I + \beta \Phi^T \Phi
+S_n^{-1} = \alpha I + \beta \Phi^T \Phi-->
 
-## MAP
+## Maksimum a posteriori-estimator
 
 Hvilken verdi $w_{\text{MAP}}$ av $w$ maksimerer $\pi(w\mid y)$?
 
-argamx_w log \pi(w \mid y) = argmax_w (log \pi(y \mid w)+log \pi(w)) = argmax_w (-\frac{\beta}{2} ||y-\Phi w||^2 - \alpha/2 ||w||^2) = argmax_w /(||y-\Phi w||^2 + \frac{\alpha}{\beta}||w||^2)
+$\argmax\limits_w \log \pi(w \mid y) = \argmax\limits_w (\log \pi(y \mid w)+\log \pi(w)) = \argmax\limits_w (-\frac{\beta}{2} ||y-\Phi w||^2 - \frac\alpha2 ||w||^2) = \argmax\limits_w (||y-\Phi w||^2 + \frac{\alpha}{\beta}||w||^2)$
 
-Dette gir en korrespondanse mellom MAP og RLS med $\lambda = \frac{\alpha}{\beta}$
+Dette gir en korrespondanse mellom MAP og RLS med $\lambda = \frac{\alpha}{\beta}$.
+
+$\ex{\text{For en vilkårlig estimator, hva er forholdet mellom MAP-estimatoren og MLE?}}$
 
 ## Prediksjon
-Ny input $x'$
+Vi ønsker ofte å finne fordelingen til et nytt datapunkt $Y'$ gitt eksisterende data $\set{(\bm x_i, y_i)}_{i\in{1,...,n}}$.
 
-Ønsker å finne fordelingen til $y'$ gitt data {x,y}
 
-Litt ulik notasjon her. Vi velger konvensjonen der kun skriver at vi betinger på stokastiske variable (sett in mer her, mangler)
+
+Litt ulik notasjon her. Vi velger konvensjonen der kun skriver at vi betinger på stokastiske variable (sett in mer her, mangler). Nevn uttrykket "posterior predictive".
 
 $\pi(y' \mid y) = \int \pi(y', w \mid y)\ dw = \int \pi(y' \mid w) \pi(w\mid y)\ dw$, der første og andre faktor i det siste integralet er hhv likelihood og posterior
 
@@ -115,17 +129,26 @@ I vårt tilfelle: $log \pi_m(y) = \frac{m}{2} \log \alpha + \frac{n}{2} \ log{\b
 
 ## Markovkjeder
 
-Bayes: $\pi(\theta \mid y) = \frac{\pi(y \mid \theta)\pi(\theta)}{\pi (y)}$
+I eksemplene vi har sett på så langt, har det gått relativt greit å regne ut normaliseringskonstanten $f(x) = \int f(x \mid \theta) \pi(\theta)\ d\theta$ i Bayes' teorem. I den virkelige verden er dette ofte beregningsmessig intraktabelt.
 
-Ofte ikke en fin form på normaliseringskonstanten
+-- sett inn enkelt eksempel som viser MC for å estimere arealet til en figur --
 
-$\defnn{\text{Markovkjede}}{}$
-Sekvens av stokastiske variabler som tilfredstiller Markov assumption:
-$\pi(X_n \mid X_{n-1} = x_{n-1}, \dots, X_1 = x_1)= \pi(X_n \mid X_{n-1} = x_{n-1})$
+$\defn{\text{Stokastisk prosess}}$
 
-$\defn{\text{Homogen Markovkjede}}$ hvis $p_{ij} = \P(X_{n+1}=j \mid X_n = i)$ ikke avhenger av $n$
+$\defn{\text{Markovantakelsen}} \P(X_{n+1} \mid X_n = x_n, \dots, X_0 = x_0)= \P(X_{n+1} \mid X_n = x_n)$\
+"Fremtiden er uavhengig av fortiden, gitt nåtiden."
 
-$\defnn{\text{Transisjonsmatrise}}{P}$ = $(p_{ij})$
+$\defn{\text{Markovkjede}}$ En stokastisk prosess som oppfyller Markovantakelsen.
+
+$\defnn{\text{Transisjonsmatrise}}{P_n} = $  $(p_{ij})_n$ med $p_{ij} = \P(X_{n+1}=j \mid X_n = i)$
+
+$\defn{\text{Homogen Markovkjede}}$ hvis $P_n = P_{n-1}\ \forall n$, altså hvis transisjonssannsynlighetene ikke avhenger av $n$
+
+$\defn{\text{Stasjonær Markovkjede}}$ hvis $\P(X_n, \dots, X_{n+k})=\P(X_0, \dots, X_k)\ \forall n,k$
+
+$\ex{\text{Vis at alle stasjonære Markovkjeder er homogene}}$
+
+$\ex{\text{Kan du finne et eksempel på en ikke-stasjonær homogen Markovkjede?}}$
 
 Eksempel: ${X_i \in \set{1,2,3}}$, definer noen sannsynligheter og be dem finne stationary distribution (hint: egenvektor). P = [[1/6 2/3 1/6][0 1 0][1/2 1/2 0]]
 

@@ -90,7 +90,7 @@ $\defnn{\text{Sannsynlighetstetthetsfunksjon (pdf)}}{f_x(x)}$ slik at $F_X(x) = 
 
 &nbsp; &nbsp; &nbsp; Det følger at $\P(a < X \leq b) = \int\limits_a^b f_X(u)\ du$.
 
-&nbsp; &nbsp; &nbsp; $\ex{\text{Egenskapene til } f_X}$ Hvilke verdier kan $f_X$ ta? Kan $f_x$ være negativ (på et intervall)? Kan $f_x$ være større enn 1?
+&nbsp; &nbsp; &nbsp; $\ex{\text{Egenskapene til } f_X}$ Hvilke verdier kan $f_X$ ta? Kan $f_X$ være negativ (på et intervall)? Kan $f_X$ være større enn 1?
 
 
 ## Simultan sannsynlighetsfordeling og uavhengige stokastiske variabler
@@ -138,12 +138,12 @@ $\ex{\text{Vis at }\mathbb{V}[a\cdot X+b\cdot Y]=a^2\cdot \mathbb{V}[X]+b^2\cdot
 
 $\ex{X\thicksim \text{Beta}(\alpha,\beta)\text{. Finn } \mathbb{E}[X]\text{ og }\mathbb{V}[X].}$[^6]
 
-&nbsp; &nbsp; &nbsp; $\defn{\text{Beta(}\alpha, \beta\text{)}}$ har tetthet $f(x)=\frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1}$[^7]
+&nbsp; &nbsp; &nbsp; $\defn{\text{Beta(}\alpha, \beta\text{)}}$ har tetthet $f(x)=\frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1}(1-x)^{\beta-1}$
 
 &nbsp; &nbsp; &nbsp; Hint: Flytt det som ikke avhenger av $x$ utenfor integralet. Skriv $a=a+1 -1$.
 
 ## Transformasjoner av stokastiske variabler
-La den stokastiske variabelen $Y$ være gitt ved en funksjon $g$[^8] av en annen stokastisk variabel $X$, altså $Y=g(X)$.
+La den stokastiske variabelen $Y$ være gitt ved en funksjon $g$[^7] av en annen stokastisk variabel $X$, altså $Y=g(X)$.
 
 
 $\thm{\text{Transformasjon av kontinuerlig stokastisk variabel}}$ $f_Y(y) = f_X(g^{-1}(y))\left\|{\frac{dx}{dy}}\right\|$
@@ -179,6 +179,6 @@ $\ex{\text{La } X\thicksim \mathcal{N}(0,1)\text{. Vis at } f_Y(y)=\frac{1}{y\sq
 
 [^6]: $\thicksim$ betyr "følger" (som i "$X$ følger en betafordeling")
 
-[^7]: Gammafunksjonen $\Gamma$ dukker opp nærmest overalt i matematikken. Siden vi kun integrerer over $x$ i forventningen, trenger du ikke å forholde deg til hvordan den er definert.
+[^7]: $g$ må være deriverbar og strengt stigende eller strengt synkende. Ser du hvorfor?
 
-[^8]: $g$ må være deriverbar og strengt stigende eller strengt synkende. Ser du hvorfor?
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyF8YFFvS9C_m7fGVgf47wZaJS75MEBUb1SB7dGLRiCwK13w/viewform?embedded=true" width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
