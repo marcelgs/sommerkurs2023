@@ -158,15 +158,6 @@ $\ex{Y=e^X}$
 
 $\ex{\text{La } X\thicksim \mathcal{N}(0,1)\text{. Vis at } f_Y(y)=\frac{1}{y\sqrt{2\pi}}\exp\left(-\frac{\ln(y)^2}{2}\color{black}\right).}$
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
 [^1]: Dette er ikke helt korrekt, og fungerer ikke når vi møter på mindre "hyggelige" mengder enn de vi tar for oss nå. Da må vi introdusere konseptet *målbarhet*, som er til å få vondt i hodet av.
 
 [^2]: $\mathcal{P}(\Omega)$ er mengden av alle delmengder av $\Omega$, og inneholder $2^4=16$ mengder (sjekk selv!).
