@@ -6,7 +6,7 @@ title: Sommerkurs i statistikk 2023
 # Notater
 Har du notater (papir/Markdown/LaTeX) fra forelesning IV og/eller V? Send dem til meg (Marcel, du finner meg på Teams/Outlook), så laster jeg dem opp her😊
 
-Det er også supert om du vil hjelpe til med å forbedre de andre notatene! Legg inn en pull request [her](https://github.com/sommerkurs2023/sommerkurs2023.github.io), eller send en melding og be om å bli lagt til i repoet.
+Det er også supert om du vil hjelpe til med å forbedre de andre notatene! Legg inn en pull request [her](https://github.com/sommerkurs2023/sommerkurs2023.github.io), eller send en melding og be om å bli lagt til i repoet. Det er spesielt behov for mer utfyllende forklaringer og bedre sammenheng mellom notatene og kodeeksemplene.
 
 Det ligger også en tilbakemeldingsboks på bunnen av hvert notat. Denne kan brukes for å påpeke feil og uklarheter og foreslå forbedringer.
 
