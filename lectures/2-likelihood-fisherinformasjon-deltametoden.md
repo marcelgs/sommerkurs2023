@@ -214,6 +214,13 @@ $\nabla h = \begin{pmatrix} \frac 1 {\beta^2}\\ \frac{-2\alpha}{\beta^3} \end{pm
 
 I [kodeeeksempelet](https://colab.research.google.com/drive/1hdqR6nb6lyQM6MpMnjFsFx5TSkO4rIau?usp=sharing) utforsker vi dette eksempelet og bruker deltametoden til å konstruere et konfidensintervall.
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 [^1]: $\mathrm{i.i.d.}:$ independent and identically distributed. Du *kan* ([ifølge Wikipedia](https://no.wikipedia.org/wiki/Uavhengige,_identisk_fordelte_variabler)) skrive $\mathrm{u.i.f.}$ ("uavhengige og identisk fordelte") på norsk, men da ser folk rart på deg.
 
 [^2]: Denne teoretiske antakelsen er det ofte vanskelig å implementere i praksis. Lykke til med å folk med på å nullstille verden til 1990 $n$ ganger for at du skal finne ut hvordan inflasjon og arbeidsledighet henger sammen.

@@ -100,4 +100,11 @@ $\defnn{\text{Konfidenskurve}}{cc}\text{cc}(\gamma) = F(D(\gamma))$
 
 ![Konfidenskurve som har bunnpunkt (konfidensnivå 0) på $\gamma \approx 0.7$, stiger i begge retninger og flater ut mot horisontal asymptote på konfidensnivå 1. 95 % konfidensintervall er markert som horisontal stiplet linje.](6-confidence-curve.png)
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyF8YFFvS9C_m7fGVgf47wZaJS75MEBUb1SB7dGLRiCwK13w/viewform?embedded=true" width="640" height="553" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
