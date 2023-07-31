@@ -40,9 +40,7 @@ MathJax = {
       var obj1 = document.querySelector(".footnotes");
       var obj2 = document.getElementById('formsbox');
 
-      var temp = obj1.innerHTML;
-      obj1.innerHTML = obj2.innerHTML;
-      obj2.innerHTML = temp;
+      obj1.parentNode.insertBefore(obj2, obj1);
   </script>
 
 <!-- Setup Google Analytics -->
