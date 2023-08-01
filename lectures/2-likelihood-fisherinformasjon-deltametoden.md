@@ -50,6 +50,8 @@ $\defnn{\text{Log-likelihood}}{\ell_n(\theta)} = \log \mathcal{L_n} = \sum_1^n \
 
 Siden vi antok uavhengighet, ser vi at likelihood-funksjonen rett og slett er simultanfordelingen til de uavhengige og identisk fordelte variablene $X_1, \dots, X_n$. Merk at vi her ser på uttrykket som en funksjon av parameteren $\theta$. Da blir det naturlig å spørre oss hvilken verdi av $\theta$ som maksimerer sannsynligheten for de observerte verdiene:
 
+$\defnn{\text{Log-likelihood}}{\ell_n(\theta)} = \log \mathcal{L_n} = \sum_1^n \log f_X(x_i;\theta)$
+
 $\defnn{\text{Maximum likelihood-estimatoren (MLE)}}{\hat{\theta}_\text{MLE}} = \argmax\limits_{\theta \in \Theta} \mathcal{L}_n(\theta) = \argmax\limits_{\theta \in \Theta} \mathcal{\ell}_n(\theta)$
 
 $\ex{X_1, ..., X_n \iidsim \operatorname{Bernoulli}(\theta)\text{. Vis at }\hat{\theta} = \bar{y} = \frac{1}{n}\sum_1^n x_i .}$
