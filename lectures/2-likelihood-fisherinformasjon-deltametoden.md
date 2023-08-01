@@ -100,7 +100,7 @@ $\defn{\text{Positiv definitt matrise }A_{n\times n}}\ $ $\bm{a}^TA\bm{a}\geq 0\
 
 $\defnn{\text{Multivariat normalfordeling}}{\mathcal{N_p}(\bm{\mu}, \Sigma)}$ har tetthet $f(\bm{x};\bm{\mu}, \Sigma)=(2\pi)^{\frac{1}{2}p}\|\Sigma\|^{-\frac{1}{2}}\exp(-\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}))$.
 
-$\ex{\bm x_1, ..., \bm x_n \iidsim \mathcal{N}_p(\bm{\mu}, \Sigma)\text{. Finn }\hat\bm{\mu}}\text{ og }\hat{\Sigma}.}$
+$\ex{\bm x_1, ..., \bm x_n \iidsim \mathcal{N}_p(\bm{\mu}, \Sigma)\text{. Finn }\boldsymbol{\hat{\mu}}\text{ og }\hat{\Sigma}.}$
 
 Som nevnt over må vi sørge for at $\hat{\Sigma}$ blir symmetrisk og positiv definitt. Her velger vi i første omgang å glemme dette, og håper at vi har flaks og kravet likevel blir oppfylt.
 
@@ -116,7 +116,7 @@ $$\begin{gather*}
 
 $$\deldel{\bm\mu} \ell_n (\bm\mu, \Sigma) \overset{\text{(2)}}{=} -\frac{1}{2} \sum_{i=1}^n\Sigma^{-1}(\bm x_i - \bm\mu) = - \left(\sum_{i=1}^n \Sigma^{-1}\bm{x_i}\right)-n\Sigma^{-1}\bm{\mu}= \bm 0$$
 
-Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\hat\bm{\mu}=\bar{\bm x}$.
+Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\boldsymbol{\hat{\mu}}=\bar{\bm x}$.
 
 $$\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\|$$
 
