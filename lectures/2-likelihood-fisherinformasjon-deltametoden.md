@@ -63,16 +63,6 @@ I flervariabeltilfellet blir $\mathcal{L}(n)$ en matrise. Vi repeterer noen regl
 
 La $A$ være en matrise som avhenger av $x$: $A = A(x)$.
 
-$$2+2$$
-
-$$\deldel{\bm x}$$
-
-$$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)$$
-
-$$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)\bm x \overset{\text{A symm.}}{=} 2 A \bm x$$
-
-$$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)\bm x \overset{\text{A symm.}}{=} 2 A \bm x \tag{2}$$
-
 $$\begin{gather*}
 A^{-1}A = I_n \\
 \deldel{x} A^{-1}A = 0 \\
@@ -112,7 +102,7 @@ $\defnn{\text{Multivariat normalfordeling}}{\mathcal{N_p}(\bm{\mu}, \Sigma)}$ ha
 
 $\ex{\bm x_1, ..., \bm x_n \iidsim \mathcal{N}_p(\bm{\mu}, \Sigma)\text{. Finn }\bm{\hat\mu}\text{ og }\hat{\Sigma}.}$
 
-Som nevnt over må vi sørge for at $\hat\Sigma$ blir symmetrisk og positiv definitt. Her velger vi i første omgang å glemme dette, og håper at vi har flaks og kravet likevel blir oppfylt.
+Som nevnt over må vi sørge for at $\hat{\Sigma}$ blir symmetrisk og positiv definitt. Her velger vi i første omgang å glemme dette, og håper at vi har flaks og kravet likevel blir oppfylt.
 
 $$\begin{gather*}
 
@@ -126,7 +116,7 @@ $$\begin{gather*}
 
 $$\deldel{\bm\mu} \ell_n (\bm\mu, \Sigma) \overset{\text{(2)}}{=} -\frac{1}{2} \sum_{i=1}^n\Sigma^{-1}(\bm x_i - \bm\mu) = - \left(\sum_{i=1}^n \Sigma^{-1}\bm{x_i}\right)-n\Sigma^{-1}\bm{\mu}= \bm 0$$
 
-Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\bm{\hat\mu}=\bar{\bm x}$.
+Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\bm{\hat{\mu}}=\bar{\bm x}$.
 
 $$\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\|$$
 
