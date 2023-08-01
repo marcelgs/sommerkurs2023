@@ -114,17 +114,11 @@ $$\begin{gather*}
 
 \end{gather*}$$
 
-$$
-
-\deldel{\bm\mu} \ell_n (\bm\mu, \Sigma) \overset{\text{(2)}}{=} -\frac{1}{2} \sum_{i=1}^n\Sigma^{-1}(\bm x_i - \bm\mu) = - \left(\sum_{i=1}^n \Sigma^{-1}\bm{x_i}\right)-n\Sigma^{-1}\bm{\mu}= \bm 0
-
-$$
+$$\deldel{\bm\mu} \ell_n (\bm\mu, \Sigma) \overset{\text{(2)}}{=} -\frac{1}{2} \sum_{i=1}^n\Sigma^{-1}(\bm x_i - \bm\mu) = - \left(\sum_{i=1}^n \Sigma^{-1}\bm{x_i}\right)-n\Sigma^{-1}\bm{\mu}= \bm 0$$
 
 Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\bm{\hat\mu}=\bar{\bm x}$.
 
-$$
-\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\|
-$$
+$$\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\|$$
 
 $\tr$ angir diagonalsummen. Merk at $\tr(\bm a^T A \bm a) = \bm a^T A \bm a$, siden $\bm a^T A \bm a$ er en skalarverdi. Dermed har vi:
 
@@ -144,15 +138,9 @@ $$\begin{aligned}
 $$
 
 
-$$
+$$\deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\| \overset{\text{(5)}}= ((\Sigma^{-1})^{-1})^T = \Sigma^T = \Sigma$$
 
-\deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\| \overset{\text{(5)}}= ((\Sigma^{-1})^{-1})^T = \Sigma^T = \Sigma
-
-$$
-
-$$
-\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma)  = 0 \Rightarrow \Sigma = \frac 1 n \sum_{i=1}^n (\bm x_i-\bm\mu)(\bm x_i -\bm\mu)^T \coloneqq \hat\Sigma
-$$
+$$\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma)  = 0 \Rightarrow \Sigma = \frac 1 n \sum_{i=1}^n (\bm x_i-\bm\mu)(\bm x_i -\bm\mu)^T \coloneqq \hat\Sigma$$
 
 Siden $\Sigma^{-1}$ er unik (det finnes en bijeksjon som mapper $\Sigma$ til $\Sigma^{-1}$), følger det at $\hat\Sigma$ maksimerer $\ell_n$ (og dermed $\mathcal{L}(n)$).
 
@@ -182,7 +170,15 @@ $\wip{\text{Denne delen må motiveres - fyll ut med flere detaljer og et eksempe
 
 $\defnn{\text{Fisherinformasjon}}{\mathcal{I}(\theta)} = -\E\left[\deldel\theta^T \deldel\theta\ \ell(\theta)\right]$ [^4]
 
-$\thm{\text{Asymptotisk normalitet for MLE}}$ $\sqrt{n}(\hat\theta_n - \theta^*)\overset{d}{\rightarrow}\norm{0, \mathcal{I}(\theta^*)^{-1}}$, der $n$ er utvalgsstørrelsen og $\theta^*$ er den (ukjente) sanne verdien av $\theta$.[^5]
+$\thm{\text{Asymptotisk normalitet for MLE}}$
+$\sqrt{n}(\hat\theta_n - \theta^*)\overset{d}{\rightarrow}\norm{0, \mathcal{I}(\theta^*)^{-1}}$
+, der
+$n$
+er utvalgsstørrelsen og
+$\theta^*$
+er den (ukjente) sanne verdien av
+$\theta$
+.[^5]
 
 Se [her](https://gregorygundersen.com/blog/2019/11/28/asymptotic-normality-mle/) for bevis og et eksempel.
 
