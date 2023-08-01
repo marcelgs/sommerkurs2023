@@ -63,15 +63,15 @@ I flervariabeltilfellet blir $\mathcal{L}(n)$ en matrise. Vi repeterer noen regl
 
 La $A$ være en matrise som avhenger av $x$: $A = A(x)$.
 
+$$2+2$$
+
+$$\deldel{\bm x}$$
+
+$$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)$$
+
+$$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)\bm x \overset{\text{A symm.}}{=} 2 A \bm x$$
+
 $$\deldel{\bm x} \bm x ^T A \bm x = (A + A^T)\bm x \overset{\text{A symm.}}{=} 2 A \bm x \tag{2}$$
-
-$$\tr(ABC)=\tr(CAB) \tag{3}$$
-
-$$\deldel{A}(\tr(AB)) = B^T \tag{4}$$
-
-$$\deldel{A}(\log \|A\|) = (A^{-1})^T = (A^T)^{-1} \tag{5}$$
-
-$$\deldel{A} (A^{-1})= -A^{-2} \tag{6}$$
 
 $$\begin{gather*}
 A^{-1}A = I_n \\
