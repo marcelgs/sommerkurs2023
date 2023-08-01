@@ -152,6 +152,10 @@ $\ex{\text{Kan du finne et eksempel på en ikke-stasjonær homogen Markovkjede?}
 
 Eksempel: ${X_i \in \set{1,2,3}}$, definer noen sannsynligheter og be dem finne stationary distribution (hint: egenvektor). P = [[1/6 2/3 1/6][0 1 0][1/2 1/2 0]]
 
+% Merk: VENSTRE egenvektor!
+
+% Forklar stasjon'r kjede vs stasjonær fordeling
+
 $\defn{\text{Kommuniserende tilstander }i, j}$
 
 
