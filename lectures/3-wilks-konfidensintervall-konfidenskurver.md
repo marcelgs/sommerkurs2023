@@ -66,7 +66,7 @@ $\defnn{\chi^2\text{-fordeling}}{\chi^2_k}$ $Z_1, \dots, Z_k \iidsim \norm{0,1}\
 
 $\thm{\text{Wilks}}D(\gamma) \distconv \chi^2_1$
 
-Merk at $\chi^2:1$ er fordelingen til kvadratet av en standardnormalfordelt stokastisk variabel.
+Merk at $\chi^2_1$ er fordelingen til kvadratet av en standardnormalfordelt stokastisk variabel.
 
 ### Steg 4: konfidensintervaller
 
