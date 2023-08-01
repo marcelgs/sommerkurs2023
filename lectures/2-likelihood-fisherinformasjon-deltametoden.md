@@ -170,15 +170,7 @@ $\wip{\text{Denne delen må motiveres - fyll ut med flere detaljer og et eksempe
 
 $\defnn{\text{Fisherinformasjon}}{\mathcal{I}(\theta)} = -\E\left[\deldel\theta^T \deldel\theta\ \ell(\theta)\right]$ [^4]
 
-$\thm{\text{Asymptotisk normalitet for MLE}}$
-$\sqrt{n}(\hat\theta_n - \theta^*)\overset{d}{\rightarrow}\norm{0, \mathcal{I}(\theta^*)^{-1}}$
-, der
-$n$
-er utvalgsstørrelsen og
-$\theta^*$
-er den (ukjente) sanne verdien av
-$\theta$
-.[^5]
+$\thm{\text{Asymptotisk normalitet for MLE}} \sqrt{n}(\hat\theta_n - \theta^*)\overset{d}{\rightarrow}\norm{0, \mathcal{I}(\theta^*)^{-1}}$, der $n$ er utvalgsstørrelsen og $\theta^*$ er den (ukjente) sanne verdien av $\theta$.[^5]
 
 Se [her](https://gregorygundersen.com/blog/2019/11/28/asymptotic-normality-mle/) for bevis og et eksempel.
 
