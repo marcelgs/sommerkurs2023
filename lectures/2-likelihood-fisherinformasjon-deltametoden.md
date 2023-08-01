@@ -23,6 +23,7 @@ $\newcommand{\tr}{\operatorname{tr}}$
 $\newcommand{\iidsim}{\overset{\mathrm{i.i.d.}}{\sim}}$
 
 $\newcommand{\deldel}[1]{\frac{\partial}{\partial #1}}$
+$\newcommand{\bm}{\boldsymbol}$
 
 # II: Likelihood-funksjonen, Fisherinformasjon og deltametoden
 ## Grunnleggende konsepter
