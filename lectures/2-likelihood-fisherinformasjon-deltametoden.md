@@ -78,7 +78,7 @@ $$\tr(ABC)=\tr(CAB) \tag{3}$$
 
 $$\deldel{A}(\tr(AB)) = B^T \tag{4}$$
 
-$$\deldel{A}(\log |A|) = (A^{-1})^T = (A^T)^{-1} \tag{5}$$
+$$\deldel{A}(\log \|A\|) = (A^{-1})^T = (A^T)^{-1} \tag{5}$$
 
 $$\deldel{A} (A^{-1})= -A^{-2} \tag{6}$$
 
@@ -94,11 +94,11 @@ Som den univariate er den multivariate normalfordelingen parametrisert ved forve
 
 En vektor av stokastiske variabler $\mathbf{X}=(X_1, \dots, X_n)^T$ har kovariansmatrise $\Sigma$ med $\Sigma_{i,j}=\operatorname{Cov}(X_i, X_j)$. Merk at $\Sigma_{i,i} = \operatorname{Cov}(X_i, X_i) = \mathbb{V}[X_i]$.
 
-$\Sigma$ må være symmetrisk og *positiv definitt*. Ser du hvorfor? Hvilke verdier kan $|\Sigma|$ ha?
+$\Sigma$ må være symmetrisk og *positiv definitt*. Ser du hvorfor? Hvilke verdier kan $\|\Sigma\|$ ha?
 
 $\defn{\text{Positiv definitt matrise }A_{n\times n}}\ $ $\bm{a}^TA\bm{a}\geq 0\ \ \forall \bm{a} \in \R^n$ 
 
-$\defnn{\text{Multivariat normalfordeling}}{\mathcal{N_p}(\bm{\mu}, \Sigma)}$ har tetthet $f(\bm{x};\bm{\mu}, \Sigma)=(2\pi)^{\frac{1}{2}p}|\Sigma|^{-\frac{1}{2}}\exp(-\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}))$.
+$\defnn{\text{Multivariat normalfordeling}}{\mathcal{N_p}(\bm{\mu}, \Sigma)}$ har tetthet $f(\bm{x};\bm{\mu}, \Sigma)=(2\pi)^{\frac{1}{2}p}\|\Sigma\|^{-\frac{1}{2}}\exp(-\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}))$.
 
 $\ex{\bm x_1, ..., \bm x_n \iidsim \mathcal{N}_p(\bm{\mu}, \Sigma)\text{. Finn }\bm{\hat\mu}\text{ og }\hat{\Sigma}.}$
 
@@ -123,7 +123,7 @@ $$
 Siden $\Sigma^{-1}$ er inverterbar, følger det at $\sum_{i=1}^n \bm{x_i}=n\bm{\mu}$, altså har vi $\bm{\hat\mu}=\bar{\bm x}$.
 
 $$
-\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log |\Sigma^{-1}|
+\deldel{\Sigma^{-1}} \ell_n (\bm\mu, \Sigma) =  -\frac{1}{2} \sum_{i=1}^n \left( \deldel{\Sigma^{-1}} (\bm{x_i-\bm{\mu}})^T\Sigma^{-1}(\bm{x_i-\bm{\mu}}) \right) + \frac{n}{2} \deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\|
 $$
 
 $\tr$ angir diagonalsummen. Merk at $\tr(\bm a^T A \bm a) = \bm a^T A \bm a$, siden $\bm a^T A \bm a$ er en skalarverdi. Dermed har vi:
@@ -146,7 +146,7 @@ $$
 
 $$
 
-\deldel{\Sigma^{-1}} \log |\Sigma^{-1}| \overset{\text{(5)}}= ((\Sigma^{-1})^{-1})^T = \Sigma^T = \Sigma
+\deldel{\Sigma^{-1}} \log \|\Sigma^{-1}\| \overset{\text{(5)}}= ((\Sigma^{-1})^{-1})^T = \Sigma^T = \Sigma
 
 $$
 
