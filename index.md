@@ -3,6 +3,20 @@ layout: default
 title: Sommerkurs i statistikk 2023
 ---
 
+# Further reading
+## Confidence distributions and confidence curves
+  1. Tore Schweder and Nils Lid Hjort. Confidence, Likelihood, Probability. Cambridge University Press, 2016.
+
+## Bayesian analysis and prediction
+  2. David MacKay. Bayesian interpolation. Neural Computation 4, 415-447, 1992.
+  3. Christian P. Robert. The Bayesian Choice. Springer, 2001.
+  4. Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.
+
+# Forelesning VII
+*2023-08-01*
+
+[Kode](https://colab.research.google.com/drive/1wrn62zLkriEOBqBbD-xiPDK-KRemTWIc?usp=sharing)
+
 # Notater
 Har du notater (papir/Markdown/LaTeX) fra forelesning IV og/eller V? Send dem til meg (Marcel, du finner meg på Teams/Outlook), så laster jeg dem opp her😊
 
