@@ -3,6 +3,11 @@ layout: default
 title: Sommerkurs 2023
 ---
 
+# Introduksjon til kvantesikker kryptografi
+*2023-08-03*
+
+[Slides](/lectures/kvantesikker.pdf)
+
 # Further reading
 **Confidence distributions and confidence curves**
   1. Tore Schweder and Nils Lid Hjort. Confidence, Likelihood, Probability. Cambridge University Press, 2016.
