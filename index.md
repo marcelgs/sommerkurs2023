@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sommerkurs i statistikk 2023
+title: Sommerkurs 2023
 ---
 
 # Further reading
