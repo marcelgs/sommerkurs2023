@@ -4,10 +4,10 @@ title: Sommerkurs 2023
 ---
 
 # Further reading
-Confidence distributions and confidence curves*
+**Confidence distributions and confidence curves**
   1. Tore Schweder and Nils Lid Hjort. Confidence, Likelihood, Probability. Cambridge University Press, 2016.
 
-*Bayesian analysis and prediction*
+**Bayesian analysis and prediction**
   2. David MacKay. Bayesian interpolation. Neural Computation 4, 415-447, 1992.
   3. Christian P. Robert. The Bayesian Choice. Springer, 2001.
   4. Christopher M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.
